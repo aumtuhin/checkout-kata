@@ -4,7 +4,7 @@
     <div *ngFor="let product of products" class="product-card">
       <div class="product-icon">{{ product.imageUrl }}</div>
       <h3>{{ product.name }}</h3>
-      <div class="product-price">{{ product.price }} €</div>
+      <div class="product-price">{{ product.price | formatCurrency }}</div>
 
       <div class="badge-container">
         <app-badge *ngIf="getOffer(product.id)" variant="primary">

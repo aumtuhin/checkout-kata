@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Product, Offer } from '../../models/product.model';
+import { FormatCurrencyPipe } from "../../pipes/format-currency.pipe";
 import { ProductService } from '../../services/product.service';
 import { CheckoutService } from '../../services/checkout.service';
 
@@ -11,7 +12,7 @@ import { BadgeComponent } from '../ui/badge/badge.component';
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, BadgeComponent],
+  imports: [CommonModule, ButtonComponent, BadgeComponent, FormatCurrencyPipe],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })

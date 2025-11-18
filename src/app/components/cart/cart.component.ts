@@ -7,11 +7,12 @@ import { CartItem } from '../../models/product.model';
 import { ButtonComponent } from '../../components/ui/button/button.component';
 import { ProductService } from '../../services/product.service';
 import { CheckoutService } from '../../services/checkout.service';
+import { FormatCurrencyPipe } from "../../pipes/format-currency.pipe";
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule, ButtonComponent],
+  imports: [CommonModule, ButtonComponent, FormatCurrencyPipe],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })

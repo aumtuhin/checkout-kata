@@ -12,7 +12,7 @@
           <span class="item-icon">{{ item.product.imageUrl }}</span>
           <div class="item-details">
             <h4>{{ item.product.name }}</h4>
-            <p class="item-unit-price">{{ item.product.price }}€ each</p>
+            <p class="item-unit-price">{{ item.product.price | formatCurrency }} each</p>
           </div>
         </div>
 
@@ -23,9 +23,11 @@
         </div>
 
         <div class="item-pricing">
-          <div class="item-total">{{ getItemPrice(item.product.id, item.quantity) }}€</div>
+          <div class="item-total">
+            {{ getItemPrice(item.product.id, item.quantity) | formatCurrency }}
+          </div>
           <div *ngIf="getSavings(item.product.id, item.quantity) > 0" class="savings">
-            Saved: {{ getSavings(item.product.id, item.quantity) }}€
+            Saved: {{ getSavings(item.product.id, item.quantity) | formatCurrency }}
           </div>
         </div>
       </div>
@@ -34,7 +36,7 @@
     <div class="cart-summary">
       <div class="total-row">
         <span class="total-label">Total:</span>
-        <span class="total-amount">{{ total$ | async }}€</span>
+        <span class="total-amount">{{ (total$ | async) || 0 | formatCurrency }}</span>
       </div>
       <div class="checkout-btn-container">
         <app-button variant="secondary" [fullWidth]="true" size="lg" (clicked)="clearCart()"
