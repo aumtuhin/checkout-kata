@@ -9,8 +9,7 @@ describe('CheckoutHeaderComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CheckoutHeaderComponent]
-    })
-    .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CheckoutHeaderComponent);
     component = fixture.componentInstance;
