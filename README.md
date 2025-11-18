@@ -9,8 +9,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 git@github.com:aumtuhin/checkout-kata.git
 
-#or https
-
+# or with https
 git clone https://github.com/aumtuhin/checkout-kata.git
 
 # Navigate to the project directory
@@ -27,11 +26,9 @@ To start a local development server, run:
 
 ```bash
 ng serve
-```
 
-Or
+# or 
 
-```bash
 npm start
 ```
 
@@ -43,6 +40,10 @@ To build the project run:
 
 ```bash
 ng build
+
+# or
+
+npm run build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
@@ -53,11 +54,9 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 
 ```bash
 ng test
-```
 
-or
+# or
 
-```bash
 npm run test
 ```
 
