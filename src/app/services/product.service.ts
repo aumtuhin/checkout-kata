@@ -24,4 +24,22 @@ export class ProductService {
   getOfferForProduct(productId: string): Offer | undefined {
     return this.offers.find((o) => o.productId === productId);
   }
+
+  calculatePrice(productId: string, quantity: number): number {
+    const product = this.getProductById(productId);
+    if (!product) return 0;
+
+    const offer = this.getOfferForProduct(productId);
+
+    if (!offer) {
+      // No offer, return regular price
+      return product.price * quantity;
+    }
+
+    // Calculate with offer
+    const offerSets = Math.floor(quantity / offer.quantity);
+    const remainder = quantity % offer.quantity;
+
+    return offerSets * offer.offerPrice + remainder * product.price;
+  }
 }

@@ -8,12 +8,14 @@
 
       <div class="badge-container">
         <app-badge *ngIf="getOffer(product.id)" variant="primary">
-        🏷️ {{ getOffer(product.id)?.description }}
-      </app-badge>
+          🏷️ {{ getOffer(product.id)?.description }}
+        </app-badge>
       </div>
 
       <div class="button-container">
-        <app-button variant="primary" size="md" [fullWidth]="true">Add to Cart</app-button>
+        <app-button variant="primary" size="md" [fullWidth]="true" (clicked)="addToCart(product.id)"
+          >Add to Cart</app-button
+        >
       </div>
     </div>
   </div>

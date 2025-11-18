@@ -17,6 +17,7 @@ export class ButtonComponent {
   onClick(event: Event) {
     if (!this.disabled) {
       this.clicked.emit(event);
+      console.log('Button clicked:', event);
     }
   }
 }

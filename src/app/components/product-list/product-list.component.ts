@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { Product, Offer } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import { CheckoutService } from '../../services/checkout.service';
 
 import { ButtonComponent } from '../ui/button/button.component';
 import { BadgeComponent } from '../ui/badge/badge.component';
@@ -11,7 +13,7 @@ import { BadgeComponent } from '../ui/badge/badge.component';
   standalone: true,
   imports: [CommonModule, ButtonComponent, BadgeComponent],
   templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.css',
+  styleUrl: './product-list.component.css'
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
@@ -19,6 +21,7 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
+    private checkoutService: CheckoutService
   ) {}
 
   ngOnInit(): void {
@@ -31,5 +34,9 @@ export class ProductListComponent implements OnInit {
 
   getOffer(productId: string): Offer | undefined {
     return this.offers.get(productId);
+  }
+
+  addToCart(productId: string): void {
+    this.checkoutService.scanItem(productId);
   }
 }

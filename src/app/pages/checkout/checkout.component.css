@@ -1,0 +1,35 @@
+.checkout-container {
+  padding: 0 20px;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.products-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.cart-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+@media (max-width: 992px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-section {
+    position: static;
+  }
+}
