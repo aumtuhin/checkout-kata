@@ -1,0 +1,16 @@
+<div class="product-list">
+  <h2>Available Products</h2>
+  <div class="products-grid">
+    <div *ngFor="let product of products" class="product-card">
+      <div class="product-icon">{{ product.imageUrl }}</div>
+      <h3>{{ product.name }}</h3>
+      <div class="product-price">{{ product.price }}¢</div>
+
+      <div *ngIf="getOffer(product.id)" class="offer-badge">
+        🏷️ {{ getOffer(product.id)?.description }}
+      </div>
+
+      <button class="add-button">Add to Cart</button>
+    </div>
+  </div>
+</div>
