@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Product, Offer } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
 
+import { ButtonComponent } from '../ui/button/button.component';
+
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ButtonComponent],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css',
 })

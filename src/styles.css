@@ -8,6 +8,9 @@
 
   --font-size-base: 16px;
   --font-size-sm: 14px;
+
+  --btn-primary-color: #4caf50;
+  --btn-secondary-color: #e0e0e0;
 }
 
 body {

@@ -4,13 +4,13 @@
     <div *ngFor="let product of products" class="product-card">
       <div class="product-icon">{{ product.imageUrl }}</div>
       <h3>{{ product.name }}</h3>
-      <div class="product-price">{{ product.price }}¢</div>
+      <div class="product-price">{{ product.price }} €</div>
 
       <div *ngIf="getOffer(product.id)" class="offer-badge">
         🏷️ {{ getOffer(product.id)?.description }}
       </div>
 
-      <button class="add-button">Add to Cart</button>
+      <app-button variant="primary" size="md" [fullWidth]="true">Add to Cart</app-button>
     </div>
   </div>
 </div>
