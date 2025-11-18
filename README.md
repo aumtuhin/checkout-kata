@@ -55,4 +55,10 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ng test
 ```
 
+or
+
+```bash
+npm run test
+```
+
 Happy Coding !! <3
