@@ -21,7 +21,6 @@
   padding: 20px;
   text-align: center;
   transition: box-shadow 0.3s;
-  position: relative;
 }
 
 .product-card:hover {
@@ -46,12 +45,10 @@
 
 
 .badge-container {
-  padding-bottom: 50px;
+  padding-bottom: 15px;
 }
 
 
 .button-container {
-  position: absolute;
-  bottom: 20px;
-  left: 25%;
+  width: 100%;
 }

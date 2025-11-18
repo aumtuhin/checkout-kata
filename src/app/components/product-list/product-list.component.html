@@ -10,6 +10,9 @@
         <app-badge *ngIf="getOffer(product.id)" variant="primary">
           🏷️ {{ getOffer(product.id)?.description }}
         </app-badge>
+        <app-badge *ngIf="!getOffer(product.id)" variant="outline">
+          🏷️ No Offer Available
+        </app-badge>
       </div>
 
       <div class="button-container">
