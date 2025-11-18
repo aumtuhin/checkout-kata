@@ -37,7 +37,7 @@
         <span class="total-amount">{{ total$ | async }}€</span>
       </div>
       <div class="checkout-btn-container" >
-        <app-button variant="secondary" [fullWidth]="true" size="lg" >Pay Now</app-button>
+        <app-button variant="secondary" [fullWidth]="true" size="lg" (clicked)="clearCart()">Clear Cart</app-button>
       </div>
     </div>
   </div>

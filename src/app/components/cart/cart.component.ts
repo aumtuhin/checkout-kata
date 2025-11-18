@@ -52,4 +52,8 @@ export class CartComponent implements OnInit {
     const savings = regularPrice - actualPrice;
     return savings > 0 ? savings : 0;
   }
+
+  clearCart(): void {
+    this.checkoutService.clearCart();
+  }
 }
