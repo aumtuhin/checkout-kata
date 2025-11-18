@@ -21,6 +21,7 @@
   padding: 20px;
   text-align: center;
   transition: box-shadow 0.3s;
+  position: relative;
 }
 
 .product-card:hover {
@@ -43,28 +44,14 @@
   margin: 10px 0;
 }
 
-.offer-badge {
-  background: #ff6b6b;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  margin: 10px 0;
-  display: inline-block;
+
+.badge-container {
+  padding-bottom: 50px;
 }
 
-.add-button {
-  background: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 10px;
-  width: 100%;
-}
 
-.add-button:hover {
-  background: #45a049;
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 25%;
 }

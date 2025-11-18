@@ -4,11 +4,12 @@ import { Product, Offer } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
 
 import { ButtonComponent } from '../ui/button/button.component';
+import { BadgeComponent } from '../ui/badge/badge.component';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, ButtonComponent],
+  imports: [CommonModule, ButtonComponent, BadgeComponent],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css',
 })

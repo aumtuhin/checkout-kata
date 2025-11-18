@@ -1,0 +1,19 @@
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+
+.primary {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+}
